@@ -57,8 +57,8 @@ Profession: ${userProfession}`)
   - Log using console.log [numA - numB]
   - Log using console.log [numA * numB]
 */
-let numA=34;
-let numB=65;
+let numA= prompt("Enter first number");
+let numB=prompt("Enter second number");
 alert(numA+numB)
 alert(numA-numB)
 alert(numA*numB)

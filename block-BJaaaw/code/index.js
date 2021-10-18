@@ -24,13 +24,10 @@ else{
   alert(numB)
 }
 // 3. Convert the above code using`?` terniary operator
-let num1 = +prompt("num1");
-let num2 = +prompt("num2");
-
-num1 > num2 ?
-alert(num1)
+numA > numB ?
+alert(numA)
 :
-alert(num2)
+alert(numB)
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
 
@@ -40,77 +37,67 @@ alert(num2)
 */
 let house=prompt("housename");
 
-if(house=="stark"){
+if(house==="stark"){
   alert(" Winter is coming")
 }
-else if(house=="lannister"){
+else if(house==="lannister"){
   alert("A lannister always pays his debt")
 }
 else{
   alert(" All men must die")
 }
 // 5. Convert the above code using`?` terniary operator
-let house1=prompt("housename")
-house1=="stark" ?
+
+house==="stark" ?
 alert(" Winter is coming")
 :
-alert(" All men must die")
-house1=="lannister" ?
+house==="lannister" ?
 alert(" A lannister always pays his debt")
 :
 alert(" All men must die")
 // Switch
-let house2=prompt("housename")
-switch(house2){
-  case "stark":
-    alert(" Winter is coming");
-    break;
-    case "lannister":
-   alert(" A lannister always pays his debt")  
-   break;
-   default:
-    alert(" All men must die"); 
-}
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
 let month=+prompt("write a month")
 switch(month){
-  case 1:
+  case "Janvary":
     alert(30)
     break;
-    case 2:
+    case "February":
     alert(28)
     break;
-    case 3:
+    case "March":
     alert(30)
     break;
-    case 4:
+    case "April":
     alert(31)
     break;
-    case 5:
+    case "May":
     alert(30)
     break;
-    case 6:
+    case "June":
     alert(30)
     break;
-    case 7:
+    case "July":
     alert(30)
     break;
-    case 8:
+    case "August":
     alert(30)
     break;
-    case 9:
+    case "September":
     alert(30)
     break;
-    case 10:
+    case "October":
     alert(30)
     break;
-    case 11:
+    case "November":
     alert(30)
     break;
-    case 12:
+    case "December":
     alert(30)
-  
+    break;
+  default:
+    alert("not a valid input")
 }
 /* 7.
 - Write a program that take the salery of the user using prompt and alert the in -hand amount.You will find out the in -hand amount by deducting the tax amoun from salery.Conditions are given below.
@@ -120,16 +107,20 @@ switch(month){
 
 */
 let salary=+prompt("in-hand");
-switch(salary){
-  case 20000:
-    alert(18000)
+switch(true){
+  case salary <= 20000:
+   let taxedAmount= (salary * 10) / 100;
+   alert(`your in-hand amount ${salary-taxedAmount}`);
     break;
-    case 40000:
-    alert(32000)
+    case salary <= 40000:
+    taxedAmount = (salary*20)/100;
+   alert(`your in-hand amount ${salary-taxedAmount}`);
     break;
-    case 50000:
-    alert(45000)
-    
+    case salary <= 50000:
+    taxedAmount=(salary*30)/100;
+   alert(`your in-hand amount ${salary-taxedAmount}`);
+   default:
+    alert("not a valid input")
 }
 
 //  if..else vs switch
@@ -152,15 +143,15 @@ if(studentMark > 100){
   alert(`"Marks can't be greater than 100"`)
 }
 
-else if(studentMark > 80){
+else if(studentMark > 80&&studentMark < 100){
   alert(`"Grade A"`)
 }
 
-else if(studentMark > 50){
+else if(studentMark > 50&&studentMark < 80){
   alert(`"Grade B"`)
 }
 
-else if(studentMark > 30){
+else if(studentMark > 30&&studentMark < 50){
   alert(`"Grade C"`)
 }
 
